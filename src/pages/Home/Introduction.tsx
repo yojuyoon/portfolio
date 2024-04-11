@@ -2,9 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Arrow from "src/assets/svgs/arrow.svg?react";
 import AnimatedText from "src/components/common/AnimatedText";
+import Button from "src/components/common/Button";
+import Contact from "./Contact";
 
 function Introduction() {
   const [replay] = useState(true);
+  const [isOpenInfos, setOpenInfos] = useState(false);
 
   const placeholderText = [
     { type: "paragraph", text: "Hi I'm," },
@@ -46,7 +49,7 @@ function Introduction() {
         animate="visible"
         transition={{ duration: 0.6 }}
       >
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#9845E8] via-[#33D2FF] to-[#DD5789] text-[96px] font-semibold animate-[gradient_15s_ease-in-out_infinite]">
+        <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#9845E8] from-5% via-[#33D2FF] to-[#DD5789] to-60% text-[96px] font-semibold">
           Jiyoung Yoon
         </div>
         <p>
@@ -55,10 +58,19 @@ function Introduction() {
           dynamic and effective work environment.
         </p>
       </motion.div>
-      <button className="group flex align-center mt-20 cursor-pointer">
-        <span>Say Hi</span>{" "}
-        <Arrow className="group-hover:translate-x-[10px] ease-in-out duration-200" />
-      </button>
+      <Button
+        className="group flex align-center mt-20 cursor-pointer pt-40"
+        onClick={() => setOpenInfos(true)}
+      >
+        {isOpenInfos ? (
+          <Contact />
+        ) : (
+          <div className="min-h-46 flex">
+            <span>Say Hi</span>
+            <Arrow className="group-hover:translate-x-[10px] ease-in-out duration-200" />
+          </div>
+        )}
+      </Button>
     </motion.div>
   );
 }

@@ -18,7 +18,9 @@ export const companies: { [key: string]: string | string[] }[] = [
     name: "Recore",
     position: "Frontend Developer",
     location: "Seoul, KR",
-    period: "",
+    description:
+      "I developed Reware, a service for users to easily view and identify warehouses nationwide. Simultaneously, I designed and implemented a CRM tool to improve the efficiency of warehouse inquiries for the sales team.",
+    period: "May 2021 - June 2022",
     content: [
       "Built a career website using React.js, focusing on writing and maintaining clean code from start to finish",
       "Managed the entire project lifecycle, from initial setup to development and deployment",
@@ -31,7 +33,9 @@ export const companies: { [key: string]: string | string[] }[] = [
     name: "Wecode",
     position: "Frontend Developer",
     location: "Seoul, KR",
-    period: "",
+    description:
+      "I worked as a Frontend Mentor & Developer at WeCode, a coding bootcamp.",
+    period: "September 2020 - March 2021",
     content: [
       "Built a career website using React.js, focusing on writing and maintaining clean code from start to finish",
       "Managed the entire project lifecycle, from initial setup to development and deployment",
@@ -41,3 +45,40 @@ export const companies: { [key: string]: string | string[] }[] = [
     ],
   },
 ];
+
+export const contactInfos = [
+  {
+    id: "email",
+    name: "Send a email",
+    link: "mailto:ziyoung1121@gmail.com",
+  },
+  {
+    id: "linkedIn",
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/jiyoung-yoon-96a209b3/",
+  },
+  {
+    id: "upwork",
+    name: "Upwork",
+    link: "https://www.upwork.com/freelancers/~015aa7da06c963dff8",
+  },
+  {
+    id: "github",
+    name: "Github",
+    link: "https://github.com/yojuyoon",
+  },
+];
+
+export const matchFromGradient: { [key: string]: string } = {
+  email: "from-[#9358F7]",
+  linkedIn: "from-[#6964DE]",
+  upwork: "from-[#F4426C]",
+  github: "from-[#D24074]",
+};
+
+export const matchToGradient: { [key: string]: string } = {
+  email: "to-[#10D7E2]",
+  linkedIn: "to-[#FCA6E9]",
+  upwork: "to-[#FBF2B1]",
+  github: "to-[#6518B4]",
+};

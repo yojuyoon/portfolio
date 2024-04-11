@@ -15,13 +15,17 @@ function Experience() {
           <>
             <Button
               onClick={() => setIndex(idx)}
-              className={clsx(
-                " py-6 px-20 rounded-[4px] relative"
-                // idx === index ? "bg-[#3c3b3bbf]" : ""
-              )}
+              className={clsx(" py-6 px-20 rounded-[4px] relative")}
             >
               <>
-                <div className="z-10 w-70">{company.name as string}</div>
+                <div
+                  className={clsx(
+                    "z-10 w-70",
+                    idx === index ? "opacity-100" : "opacity-70 "
+                  )}
+                >
+                  {company.name as string}
+                </div>
                 {idx === index ? (
                   <motion.div
                     layout
@@ -34,7 +38,7 @@ function Experience() {
           </>
         ))}
       </div>
-      <div className="mt-40 min-h-240">
+      <div className="mt-40 min-h-120">
         <AnimatePresence mode="wait">
           <motion.div
             key={index ? (companies[index].name as string) : "empty"}
