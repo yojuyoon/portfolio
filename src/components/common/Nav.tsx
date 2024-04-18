@@ -1,11 +1,15 @@
-import Theme from "src/assets/svgs/theme.svg?react";
+// import Theme from "src/assets/svgs/theme.svg?react";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 function Nav() {
+  const navigate = useNavigate();
   return (
     <nav className="font-light fixed top-0 left-0 right-0 backdrop-blur-xl">
       <div className="flex justify-between align-center mx-auto py-20 xl:max-w-desktop">
-        <div>JY</div>
+        <div className="cursor-pointer" onClick={() => navigate("/")}>
+          JY
+        </div>
         <ul className="flex justify-between gap-30">
           <Button
             onClick={() => {}}
@@ -20,17 +24,19 @@ function Nav() {
             Resume
           </Button>
           <Button
-            onClick={() => {}}
+            onClick={() => {
+              navigate("/about");
+            }}
             className="hover:text-focusText ease-out duration-300"
           >
-            Contact
+            About
           </Button>
-          <Button
+          {/* <Button
             onClick={() => {}}
             className="hover:text-focusText ease-out duration-300"
           >
             <Theme />
-          </Button>
+          </Button> */}
         </ul>
       </div>
     </nav>

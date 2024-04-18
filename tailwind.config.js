@@ -33,6 +33,9 @@ export default {
         darkBg: "#201F1F",
         caption: "#6CACE4",
         focusText: "#13ACDE",
+        darkGray: "#6b6a6a",
+        mediumGray: "#999797",
+        lightGray: "#C5C5C5",
       },
       keyframes: {
         gradient: {

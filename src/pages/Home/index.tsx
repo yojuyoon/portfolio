@@ -1,31 +1,28 @@
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { spring, useVariants } from "src/hooks/config";
+import { useState } from "react";
 import Layout from "src/components/common/Layout";
 import Experience from "./Experience";
 import Introduction from "./Introduction";
+import Project from "./Project";
 
 function App() {
-  const ref = useRef(null);
-  const variants = useVariants(ref);
+  const [cursorText, setCursorText] = useState("");
+  const [cursorVariant, setCursorVariant] = useState("default");
 
-  const [cursorText] = useState("");
-  const [cursorVariant] = useState("default");
+  const hiEnter = () => {
+    setCursorText("👋");
+    setCursorVariant("hi");
+  };
+
+  const hiLeave = () => {
+    setCursorText("");
+    setCursorVariant("default");
+  };
 
   return (
-    <Layout mouseRef={ref}>
-      <motion.div
-        variants={variants}
-        className="rounded-full mix-blend-difference"
-        animate={cursorVariant}
-        transition={spring}
-      >
-        <span className="cursorText">{cursorText}</span>
-      </motion.div>
-      <main className="font-poppins m-13 xl:max-w-desktop mx-auto py-30 font-light">
-        <Introduction />
-        <Experience />
-      </main>
+    <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
+      <Introduction hiEnter={hiEnter} hiLeave={hiLeave} />
+      <Experience />
+      <Project />
     </Layout>
   );
 }

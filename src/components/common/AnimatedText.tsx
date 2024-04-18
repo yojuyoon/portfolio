@@ -1,29 +1,24 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
-// Word wrapper
-const Wrapper = (props) => {
-  // We'll do this to prevent wrapping of words using CSS
-  return <span className="word-wrapper">{props.children}</span>;
+const Wrapper = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className: string;
+}) => {
+  return <span className={clsx("word-wrapper", className)}>{children}</span>;
 };
 
-// Map API "type" vaules to JSX tag names
-const tagMap = {
-  paragraph: "p",
-  heading1: "h1",
-  heading2: "h2",
-};
-
-const tagStyleMap = {
+const tagStyleMap: { [key: string]: string } = {
   paragraph: "text-white",
   heading1: "",
 };
 
-// AnimatedCharacters
-// Handles the deconstruction of each word and character to setup for the
-// individual character animations
-const AnimatedCharacters = (props) => {
+const AnimatedCharacters = (props: { type: string; text: string }) => {
   if (props.type === "heading1") return;
-  // Framer Motion variant object, for controlling animation
   const item = {
     hidden: {
       y: "200%",
@@ -35,31 +30,23 @@ const AnimatedCharacters = (props) => {
     },
   };
 
-  //  Split each word of props.text into an array
   const splitWords = props.text.split(" ");
 
-  // Create storage array
-  const words = [];
+  const words: string[][] = [];
 
-  // Push each word into words array
   for (const [, item] of splitWords.entries()) {
     words.push(item.split(""));
   }
 
-  // Add a space ("\u00A0") to the end of each word
   words.map((word) => {
     return word.push("\u00A0");
   });
 
-  // Get the tag name from tagMap
-  const Tag = tagMap[props.type];
-
   return (
-    <Tag className={tagStyleMap[props.type]}>
-      {words.map((word, index) => {
+    <p>
+      {words.map((_, index) => {
         return (
-          // Wrap each word in the Wrapper component
-          <Wrapper key={index}>
+          <Wrapper key={index} className={tagStyleMap[props.type]}>
             {words[index].flat().map((element, index) => {
               return (
                 <span
@@ -81,8 +68,7 @@ const AnimatedCharacters = (props) => {
           </Wrapper>
         );
       })}
-      {/* {} */}
-    </Tag>
+    </p>
   );
 };
 

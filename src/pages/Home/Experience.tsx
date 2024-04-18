@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { companies } from "../../constant";
 import Button from "../../components/common/Button";
 import { AnimatePresence, motion } from "framer-motion";
@@ -12,10 +12,11 @@ function Experience() {
       EXPERIENCE
       <div className="flex align-center gap-30 mt-40">
         {companies.map((company: { [key: string]: string | string[] }, idx) => (
-          <>
+          <Fragment key={company.name as string}>
             <Button
+              key={company.name as string}
               onClick={() => setIndex(idx)}
-              className={clsx(" py-6 px-20 rounded-[4px] relative")}
+              className={clsx("py-6 px-20 rounded-[4px] relative")}
             >
               <>
                 <div
@@ -35,7 +36,7 @@ function Experience() {
                 ) : null}
               </>
             </Button>
-          </>
+          </Fragment>
         ))}
       </div>
       <div className="mt-40 min-h-120">

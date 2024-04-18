@@ -58,27 +58,27 @@ export const contactInfos = [
     link: "https://www.linkedin.com/in/jiyoung-yoon-96a209b3/",
   },
   {
-    id: "upwork",
-    name: "Upwork",
-    link: "https://www.upwork.com/freelancers/~015aa7da06c963dff8",
-  },
-  {
     id: "github",
     name: "Github",
     link: "https://github.com/yojuyoon",
   },
+  {
+    id: "upwork",
+    name: "Upwork",
+    link: "https://www.upwork.com/freelancers/~015aa7da06c963dff8",
+  },
 ];
 
 export const matchFromGradient: { [key: string]: string } = {
-  email: "from-[#9358F7]",
-  linkedIn: "from-[#6964DE]",
-  upwork: "from-[#F4426C]",
-  github: "from-[#D24074]",
+  email: "border-2 border-[#542481]",
+  linkedIn: "border-2 border-[#432871]",
+  upwork: "border-2 border-[#276f82]",
+  github: "border-2 border-[#6b2a42]",
 };
 
 export const matchToGradient: { [key: string]: string } = {
-  email: "to-[#10D7E2]",
-  linkedIn: "to-[#FCA6E9]",
-  upwork: "to-[#FBF2B1]",
-  github: "to-[#6518B4]",
+  email: "hover:border-[#9845E8] transition-all duration-1000",
+  linkedIn: "hover:border-[#9358F7] transition-all duration-[900ms]",
+  upwork: "hover:border-[#33D2FF] transition-all duration-[800ms]",
+  github: "hover:border-[#DD5789] transition-all duration-700",
 };
