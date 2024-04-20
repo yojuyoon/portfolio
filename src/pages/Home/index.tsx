@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Layout from "src/components/common/Layout";
 import Experience from "./Experience";
 import Introduction from "./Introduction";
 import Project from "./Project";
 
 function App() {
+  const projectRef = useRef(null);
   const [cursorText, setCursorText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
 
@@ -19,10 +20,14 @@ function App() {
   };
 
   return (
-    <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
+    <Layout
+      cursorText={cursorText}
+      cursorVariant={cursorVariant}
+      projectRef={projectRef}
+    >
       <Introduction hiEnter={hiEnter} hiLeave={hiLeave} />
       <Experience />
-      <Project />
+      <Project projectRef={projectRef} />
     </Layout>
   );
 }
