@@ -8,7 +8,6 @@ function App() {
   const projectRef = useRef(null);
   const [cursorText, setCursorText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
-
   const hiEnter = () => {
     setCursorText("👋");
     setCursorVariant("hi");
@@ -18,17 +17,18 @@ function App() {
     setCursorText("");
     setCursorVariant("default");
   };
-
   return (
-    <Layout
-      cursorText={cursorText}
-      cursorVariant={cursorVariant}
-      projectRef={projectRef}
-    >
-      <Introduction hiEnter={hiEnter} hiLeave={hiLeave} />
-      <Experience />
-      <Project projectRef={projectRef} />
-    </Layout>
+    <>
+      <Layout
+        cursorText={cursorText}
+        cursorVariant={cursorVariant}
+        projectRef={projectRef}
+      >
+        <Introduction hiEnter={hiEnter} hiLeave={hiLeave} />
+        <Experience />
+        <Project projectRef={projectRef} />
+      </Layout>
+    </>
   );
 }
 

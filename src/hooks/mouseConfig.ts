@@ -26,7 +26,6 @@ export const useVariants = () => {
       );
     };
   }, []);
-
   return { cursorXSpring, cursorYSpring };
 };
 

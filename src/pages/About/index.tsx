@@ -1,26 +1,25 @@
 import Layout from "src/components/common/Layout";
 import profile from "/src/assets/images/profile_img.png";
-// import { useState } from "react";
+import { useState } from "react";
 import Button from "src/components/common/Button";
+import { resume } from "src/constant";
 
 function About() {
-  // const [cursorText, setCursorText] = useState("");
-  // const [cursorVariant, setCursorVariant] = useState("about");
+  const [cursorText, setCursorText] = useState("");
+  const [cursorVariant, setCursorVariant] = useState("about");
 
-  // const hiEnter = () => {
-  //   setCursorText("👋");
-  //   setCursorVariant("hi");
-  // };
+  const hiEnter = () => {
+    setCursorText("👋");
+    setCursorVariant("hi");
+  };
 
-  // const hiLeave = () => {
-  //   setCursorText("");
-  //   setCursorVariant("default");
-  // };
+  const hiLeave = () => {
+    setCursorText("");
+    setCursorVariant("default");
+  };
 
   return (
-    <Layout
-    // cursorText={cursorText} cursorVariant={cursorVariant}
-    >
+    <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
       <section>
         <div className="border-b border-[#3c3b3bbf] pb-20">
           <h1 className="text-[80px] font-semibold">About me</h1>
@@ -57,6 +56,8 @@ function About() {
             <br />
             Feel free to reach out via{" "}
             <Button
+              onMouseEnter={hiEnter}
+              onMouseLeave={hiLeave}
               onClick={() => window.open("mailto:hannahyoon1121@gmail.com")}
               className="text-white underline"
             >
@@ -64,15 +65,24 @@ function About() {
             </Button>
             , or follow me on{" "}
             <Button
+              onMouseEnter={hiEnter}
+              onMouseLeave={hiLeave}
               onClick={() => window.open("https://www.instagram.com/yojuyoon")}
               className="text-white underline"
             >
               Instagram
             </Button>
             . Want to see where I’ve worked? Check out my{" "}
-            <span className="text-white underline">Resume</span>, or Connect
-            with me on{" "}
             <Button
+              onClick={() => window.open(resume)}
+              className="text-white underline"
+            >
+              Resume
+            </Button>
+            , or Connect with me on{" "}
+            <Button
+              onMouseEnter={hiEnter}
+              onMouseLeave={hiLeave}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/hannah-jiyoung-yoon")
               }

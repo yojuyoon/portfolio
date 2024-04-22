@@ -82,3 +82,6 @@ export const matchToGradient: { [key: string]: string } = {
   upwork: "hover:border-[#33D2FF] transition-all duration-[800ms]",
   github: "hover:border-[#DD5789] transition-all duration-700",
 };
+
+export const resume =
+  "https://docs.google.com/document/d/10TqpTGE6u5SXv7Z1Go5JHD2_uPqQ-dLx/edit?usp=sharing&ouid=112610464733004498804&rtpof=true&sd=true";

@@ -1,9 +1,14 @@
 // import Theme from "src/assets/svgs/theme.svg?react";
+import { includes } from "lodash";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { resume } from "src/constant";
 
 function Nav({ scrollingTop }: { scrollingTop: () => void }) {
   const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <nav className="font-light fixed top-0 left-0 right-0 backdrop-blur-xl">
       <div className="flex justify-between align-center mx-auto py-20 xl:max-w-desktop">
@@ -12,13 +17,16 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
         </div>
         <ul className="flex justify-between gap-30">
           <Button
-            onClick={scrollingTop}
+            onClick={() => {
+              if (includes(location.pathname, "about")) navigate("/");
+              scrollingTop();
+            }}
             className="hover:text-focusText ease-out duration-300"
           >
             Projects
           </Button>
           <Button
-            onClick={() => {}}
+            onClick={() => window.open(resume)}
             className="hover:text-focusText ease-out duration-300"
           >
             Resume

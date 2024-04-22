@@ -1,5 +1,5 @@
 import { RefObject } from "react";
-import Link from "src/assets/svgs/link.svg?react";
+import Github from "src/assets/svgs/github.svg?react";
 import Button from "src/components/common/Button";
 
 const Card = ({ info }: { info: { [key: string]: string } }) => {
@@ -14,7 +14,7 @@ const Card = ({ info }: { info: { [key: string]: string } }) => {
       <div className="flex justify-between pt-20 pb-10">
         <h5>{info.name}</h5>
         <Button onClick={() => window.open(info.link)}>
-          <Link />
+          <Github />
         </Button>
       </div>
       <span className="text-lightGray font-thin">{info.description}</span>
@@ -26,22 +26,25 @@ const Card = ({ info }: { info: { [key: string]: string } }) => {
 const projectList: { [key: string]: string }[] = [
   {
     name: "KnockKnock",
-    description: "Here is the description.",
-    techStach: "TRPC - React - Next.js - Recoil - Tailwind",
+    description:
+      "The project is a platform for organizing meetups and bringing diverse people together with common interests.",
+    techStack: "TRPC - React - Next.js - Recoil - Tailwind",
     link: "https://github.com/kim-taewoo/knock-knock",
     img: "/src/assets/images/knockknock.png",
   },
   {
     name: "WeChicken",
-    description: "Here is the description.",
-    techStach: "React - Next.js - React Query - RTK - Emotion.js",
+    description:
+      "This service is designed to help students in the bootcamp build a blog community, archive their blogs, and promote learning through blog post challenges.",
+    techStack: "React - Next.js - React Query - RTK - Emotion.js",
     link: "https://github.com/wechicken/wechicken-frontend-2",
     img: "/src/assets/images/wechicken.jpeg",
   },
   {
     name: "DataWeSA",
-    description: "Here is the description.",
-    techStach: "React - Next.js - React Query - RTK - Emotion.js",
+    description:
+      "This project is a clone project that visualizes charts, maps, and collects and analyzes various data from the U.S., including coronavirus data.",
+    techStack: "React(Hooks) - Redux - Highcharts - Styled-Component - ES6+",
     video: "https://youtu.be/EdORsq1cI6s?si=Ui7bxGadJ6Ab_O3z",
     link: "https://github.com/yojuyoon/10-dataWeSA-frontend",
     img: "/src/assets/images/datawesa.png",
