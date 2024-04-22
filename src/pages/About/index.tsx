@@ -1,24 +1,26 @@
 import Layout from "src/components/common/Layout";
 import profile from "/src/assets/images/profile_img.png";
-import { useState } from "react";
+// import { useState } from "react";
 import Button from "src/components/common/Button";
 
 function About() {
-  const [cursorText, setCursorText] = useState("");
-  const [cursorVariant, setCursorVariant] = useState("about");
+  // const [cursorText, setCursorText] = useState("");
+  // const [cursorVariant, setCursorVariant] = useState("about");
 
-  const hiEnter = () => {
-    setCursorText("👋");
-    setCursorVariant("hi");
-  };
+  // const hiEnter = () => {
+  //   setCursorText("👋");
+  //   setCursorVariant("hi");
+  // };
 
-  const hiLeave = () => {
-    setCursorText("");
-    setCursorVariant("default");
-  };
+  // const hiLeave = () => {
+  //   setCursorText("");
+  //   setCursorVariant("default");
+  // };
 
   return (
-    <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
+    <Layout
+    // cursorText={cursorText} cursorVariant={cursorVariant}
+    >
       <section>
         <div className="border-b border-[#3c3b3bbf] pb-20">
           <h1 className="text-[80px] font-semibold">About me</h1>

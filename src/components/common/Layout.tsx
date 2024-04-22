@@ -9,9 +9,9 @@ function Layout({
   children,
   mouseRef,
   projectRef,
-  cursorText,
-  cursorVariant,
-}: {
+}: // cursorText,
+// cursorVariant,
+{
   children: ReactNode;
   mouseRef?: React.MutableRefObject<null>;
   cursorText?: string;
