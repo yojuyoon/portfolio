@@ -1,6 +1,7 @@
 import Layout from "src/components/common/Layout";
 import profile from "/src/assets/images/profile_img.png";
 import { useState } from "react";
+import Button from "src/components/common/Button";
 
 function About() {
   const [cursorText, setCursorText] = useState("");
@@ -34,57 +35,49 @@ function About() {
             <br />
             <span className="text-darkGray">What I Do</span>
             <br />
-            With two years of invaluable experience in my role at Harmony
-            Technology –– a tech company based here in Rabat, I have honed my
-            skills in React.js, Next.js, TailwindCSS, and TypeScript, allowing
-            me to craft seamless and interactive user experiences. During my
-            time at Harmony Technology, I had the privilege of collaborating on
-            projects for esteemed clients such as the Ministry of Health,
-            Ministry of Education, and Ministry of Justice. It was an incredibly
-            rewarding experience to develop applications that directly impact
-            the lives of Moroccan citizens. <br />
+            With three years of invaluable experience in my role at an IT
+            company based in Seoul, I have sharpened my expertise in React.js,
+            Next.js, TailwindCSS, and TypeScript, enabling me to create seamless
+            and engaging user experiences. Throughout my tenure at different
+            companies, I've had the opportunity to collaborate on projects aimed
+            at enhancing UI/UX and gaining insights into various business
+            models. Developing applications during this time has been immensely
+            gratifying. <br />
             <br />
             <span className="text-darkGray">What I Did</span>
             <br />
-            Before delving into the realm of front end engineering, I spent five
-            years as a graphic designer. This background has equipped me with a
-            keen eye for aesthetics and a deep understanding of user-centered
-            design principles. It enables me to seamlessly blend functionality
-            and visual appeal in every project I undertake.
+            Before delving into the realm of front end engineering, I spent
+            three years as a graphic designer. This background has equipped me
+            with a keen eye for aesthetics and a deep understanding of
+            user-centered design principles. It enables me to seamlessly blend
+            functionality and visual appeal in every project I undertake.
             <br />
             <br />
             Feel free to reach out via{" "}
-            <span
+            <Button
+              onClick={() => window.open("mailto:hannahyoon1121@gmail.com")}
               className="text-white underline"
-              onMouseEnter={hiEnter}
-              onMouseLeave={hiLeave}
             >
               e-mail
-            </span>
+            </Button>
             , or follow me on{" "}
-            <span
+            <Button
+              onClick={() => window.open("https://www.instagram.com/yojuyoon")}
               className="text-white underline"
-              onMouseEnter={hiEnter}
-              onMouseLeave={hiLeave}
             >
-              Twitter
-            </span>
+              Instagram
+            </Button>
             . Want to see where I’ve worked? Check out my{" "}
-            <span
+            <span className="text-white underline">Resume</span>, or Connect
+            with me on{" "}
+            <Button
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/hannah-jiyoung-yoon")
+              }
               className="text-white underline"
-              onMouseEnter={hiEnter}
-              onMouseLeave={hiLeave}
-            >
-              Resume
-            </span>
-            , or Connect with me on{" "}
-            <span
-              className="text-white underline"
-              onMouseEnter={hiEnter}
-              onMouseLeave={hiLeave}
             >
               LinkedIn
-            </span>
+            </Button>
             .
           </div>
           <div className="min-w-344">

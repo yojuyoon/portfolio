@@ -8,7 +8,7 @@ function Experience() {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="mt-40 pb-60 border-b border-[#3c3b3bbf]">
+    <div className="mt-40 pb-60 border-b dark:border-[#3c3b3bbf]">
       EXPERIENCE
       <div className="flex align-center gap-30 mt-40">
         {companies.map((company: { [key: string]: string | string[] }, idx) => (
@@ -30,7 +30,7 @@ function Experience() {
                 {idx === index ? (
                   <motion.div
                     layout
-                    className="absolute top-[-1.5px] left-0 bg-[#252525] w-110 h-40 rounded-[4px] z-0 mix-blend-screen"
+                    className="absolute top-[-1.5px] left-0 dark:bg-lightBlack bg-extraLightGray w-110 h-40 rounded-[4px] z-[-1] mix-blend-screen"
                     layoutId="underline"
                   />
                 ) : null}

@@ -14,7 +14,7 @@ function Footer() {
     upwork: <Upwork />,
   };
   return (
-    <div className="py-60 flex justify-between items-center font-thin xl:max-w-desktop mx-auto">
+    <div className="py-60 flex justify-between items-center font-thin xl:max-w-desktop mx-auto border-t dark:border-[#3c3b3bbf]">
       <span>Copyright © 2024 Hannah Yoon</span>
       <div className="flex items-center gap-20">
         {contactInfos.map((info) => {

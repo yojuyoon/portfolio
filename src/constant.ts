@@ -50,12 +50,12 @@ export const contactInfos = [
   {
     id: "email",
     name: "Send a email",
-    link: "mailto:ziyoung1121@gmail.com",
+    link: "mailto:hannahyoon1121@gmail.com",
   },
   {
     id: "linkedIn",
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/jiyoung-yoon-96a209b3/",
+    link: "https://www.linkedin.com/in/hannah-jiyoung-yoon/",
   },
   {
     id: "github",
