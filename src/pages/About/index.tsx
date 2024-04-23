@@ -30,7 +30,9 @@ function About() {
     <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
       <section>
         <div className="border-b dark:border-[#3c3b3bbf] pb-20">
-          <h1 className="text-[80px] font-semibold">About me</h1>
+          <h1 className="text-[62px] leading-[120%] md:text-[74px] font-semibold">
+            About me
+          </h1>
           <span className="opacity-80 text-mediumGray">
             Who I am and what I do
           </span>

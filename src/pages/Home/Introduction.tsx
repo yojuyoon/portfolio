@@ -52,7 +52,7 @@ function Introduction({
       >
         <div
           className={clsx(
-            "text-transparent bg-clip-text bg-gradient-to-r from-[#9845E8] from-5% via-[#33D2FF] to-[#DD5789] to-60% font-semibold text-[72px]",
+            "text-transparent bg-clip-text bg-gradient-to-r from-[#9845E8] from-5% via-[#33D2FF] to-[#DD5789] to-60% font-semibold text-[72px] leading-[120%] pb-40",
             "md:text-[84px] lg:text-[96px]"
           )}
         >

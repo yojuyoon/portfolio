@@ -33,7 +33,7 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
     <nav className="font-light fixed top-0 left-0 right-0 dark:bg-darkBg bg-lightBg z-50 md:bg-transparent">
       <div className="flex justify-between align-center mx-auto p-20 xl:px-0 xl:py-20 xl:max-w-desktop">
         <div className="cursor-pointer" onClick={() => navigate("/")}>
-          HY
+          Hannah Yoon
         </div>
         <MobileNav menuList={menuList} />
 
