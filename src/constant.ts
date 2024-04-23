@@ -70,17 +70,17 @@ export const contactInfos = [
 ];
 
 export const matchFromGradient: { [key: string]: string } = {
-  email: "border-2 border-[#542481]",
-  linkedIn: "border-2 border-[#432871]",
-  upwork: "border-2 border-[#276f82]",
-  github: "border-2 border-[#6b2a42]",
+  email: "border-2 border-[#c894fc] dark:border-[#542481]",
+  linkedIn: "border-2 border-[#a97af9] dark:border-[#432871]",
+  upwork: "border-2 border-[#64dbfc] dark:border-[#276f82]",
+  github: "border-2 border-[#f473a2] dark:border-[#6b2a42]",
 };
 
 export const matchToGradient: { [key: string]: string } = {
-  email: "hover:border-[#9845E8] transition-all duration-1000",
+  email: "hover:border-[#9845E8] transition-all duration-[1000ms]",
   linkedIn: "hover:border-[#9358F7] transition-all duration-[900ms]",
-  upwork: "hover:border-[#33D2FF] transition-all duration-[800ms]",
-  github: "hover:border-[#DD5789] transition-all duration-700",
+  github: "hover:border-[#DD5789] transition-all duration-[800ms]",
+  upwork: "hover:border-[#33D2FF] transition-all duration-[700ms]",
 };
 
 export const resume =

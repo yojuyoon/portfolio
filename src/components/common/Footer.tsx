@@ -17,7 +17,7 @@ function Footer() {
   return (
     <div
       className={clsx(
-        "py-60 justify-between items-center font-thin xl:max-w-desktop mx-auto border-t dark:border-[#3c3b3bbf]",
+        "py-60 justify-between items-center font-light dark:font-thin xl:max-w-desktop mx-auto border-t dark:border-[#3c3b3bbf]",
         "md:flex"
       )}
     >

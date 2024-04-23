@@ -30,6 +30,7 @@ export default {
       },
       maxWidth: { desktop: "1080px" },
       colors: {
+        lightBg: "#F1F1F1",
         darkBg: "#201F1F",
         caption: "#6CACE4",
         focus: "#13ACDE",

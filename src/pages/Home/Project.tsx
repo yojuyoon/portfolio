@@ -33,7 +33,7 @@ const Card = ({
         />
       </div>
       <div className="flex justify-between pt-20 pb-10">
-        <h5>{info.name}</h5>
+        <h5 className="font-medium dark:font-normal">{info.name}</h5>
         <Button
           onClick={() => window.open(info.link)}
           onMouseEnter={codeEnter}
@@ -42,7 +42,7 @@ const Card = ({
           <Github />
         </Button>
       </div>
-      <div className="text-lightGray font-thin min-h-75">
+      <div className="dark:text-lightGray dark:font-thin min-h-75">
         {info.description}
       </div>
       <div className="text-focus pt-20">{info.techStack}</div>

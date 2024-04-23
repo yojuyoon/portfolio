@@ -49,15 +49,19 @@ function Experience() {
             transition={{ duration: 0.2 }}
           >
             <div className="flex justify-between mb-10 flex-col sm:flex-row">
-              <span>{companies[index].position}</span>
-              <span className="font-thin opacity-80 pt-10 sm:opacity-100 sm:pt-0">
+              <span className="font-medium dark:font-normal">
+                {companies[index].position}
+              </span>
+              <span className="dark:font-thin opacity-80 pt-10 sm:opacity-100 sm:pt-0">
                 {companies[index].period}
               </span>
             </div>
             <span className="text-caption">
               {companies[index].name} / {companies[index].location}
             </span>
-            <p className="mt-10 font-thin">{companies[index].description}</p>
+            <p className="mt-10 dark:font-thin">
+              {companies[index].description}
+            </p>
           </motion.div>
         </AnimatePresence>
       </div>

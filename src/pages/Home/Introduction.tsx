@@ -38,7 +38,7 @@ function Introduction({
       animate={replay ? "visible" : "hidden"}
       variants={container}
     >
-      <div className="container">
+      <div className="">
         {placeholderText.map((item, index) => {
           return <AnimatedText {...item} key={index} />;
         })}

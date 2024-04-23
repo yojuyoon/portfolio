@@ -32,7 +32,7 @@ function Layout({
     <Fragment>
       <motion.div
         className={clsx(
-          "rounded-full mix-blend-difference fixed top-0 left-0 z-0 hidden lg:block",
+          "rounded-full dark:mix-blend-difference fixed top-0 left-0 z-10 hidden lg:block",
           matchClassName[cursorVariant!]
         )}
         style={{
@@ -47,7 +47,7 @@ function Layout({
 
       <div
         className={clsx(
-          "font-poppins dark:bg-darkBg dark:text-white text-darkbg px-20",
+          "font-poppins dark:bg-darkBg bg-lightBg dark:text-white text-darkbg px-20",
           "xl:px-0"
         )}
         ref={mouseRef}

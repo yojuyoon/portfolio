@@ -13,7 +13,7 @@ const Wrapper = ({
 };
 
 const tagStyleMap: { [key: string]: string } = {
-  paragraph: "text-white",
+  paragraph: "dark:text-white",
   heading1: "",
 };
 

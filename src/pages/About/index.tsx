@@ -29,7 +29,7 @@ function About() {
   return (
     <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
       <section>
-        <div className="border-b border-[#3c3b3bbf] pb-20">
+        <div className="border-b dark:border-[#3c3b3bbf] pb-20">
           <h1 className="text-[80px] font-semibold">About me</h1>
           <span className="opacity-80 text-mediumGray">
             Who I am and what I do
@@ -37,12 +37,17 @@ function About() {
         </div>
         <div className="flex flex-wrap gap-40 py-30 text-mediumGray">
           <div className="max-w-600">
-            <span className="text-darkGray">Who I am</span>
-            <br /> I’m <span className="text-white">Hannah Yoon</span> front-end
-            engineer based in Sydney, Australia 🇦🇺.
+            <span className="dark:text-darkGray text-lightBlack">Who I am</span>
+            <br /> I’m{" "}
+            <span className="text-black font-medium dark:text-white dark:font-light">
+              Hannah Yoon
+            </span>{" "}
+            front-end engineer based in Sydney, Australia 🇦🇺.
             <br />
             <br />
-            <span className="text-darkGray">What I Do</span>
+            <span className="dark:text-darkGray text-lightBlack">
+              What I Do
+            </span>
             <br />
             With three years of invaluable experience in my role at an IT
             company based in Seoul, I have sharpened my expertise in React.js,
@@ -53,7 +58,9 @@ function About() {
             models. Developing applications during this time has been immensely
             gratifying. <br />
             <br />
-            <span className="text-darkGray">What I Did</span>
+            <span className="dark:text-darkGray text-lightBlack">
+              What I Did
+            </span>
             <br />
             Before delving into the realm of front end engineering, I spent
             three years as a graphic designer. This background has equipped me
@@ -67,7 +74,7 @@ function About() {
               href="mailto:hannahyoon1121@gmail.com"
               onMouseEnter={hiEnter}
               onMouseLeave={hiLeave}
-              className="text-white underline"
+              className="text-black font-medium underline dark:text-white dark:font-light"
             >
               e-mail
             </a>
@@ -76,14 +83,14 @@ function About() {
               onMouseEnter={hiEnter}
               onMouseLeave={hiLeave}
               onClick={() => window.open("https://www.instagram.com/yojuyoon")}
-              className="text-white underline"
+              className="text-black font-medium underline dark:text-white dark:font-light"
             >
               Instagram
             </Button>
             . Want to see where I’ve worked? Check out my{" "}
             <Button
               onClick={() => window.open(resume)}
-              className="text-white underline"
+              className="text-black font-medium underline dark:text-white dark:font-light"
             >
               Resume
             </Button>
@@ -94,7 +101,7 @@ function About() {
               onClick={() =>
                 window.open("https://www.linkedin.com/in/hannah-jiyoung-yoon")
               }
-              className="text-white underline"
+              className="text-black font-medium underline dark:font-light dark:text-white "
             >
               LinkedIn
             </Button>

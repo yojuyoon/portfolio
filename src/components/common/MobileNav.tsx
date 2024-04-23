@@ -69,7 +69,7 @@ function MobileNav({ menuList }: { menuList: Menu[] }) {
           )}
           onClick={() => {
             if (!isOpen) return;
-            info.action;
+            info.action();
           }}
         >
           {info.name}
