@@ -32,7 +32,7 @@ function Layout({
     <Fragment>
       <motion.div
         className={clsx(
-          "rounded-full dark:mix-blend-difference fixed top-0 left-0 z-10 hidden lg:block",
+          "w-40 h-40 rounded-full dark:mix-blend-difference fixed top-0 left-0 z-10 hidden lg:block",
           matchClassName[cursorVariant!]
         )}
         style={{

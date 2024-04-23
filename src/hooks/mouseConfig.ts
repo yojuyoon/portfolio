@@ -12,8 +12,8 @@ export const useVariants = () => {
 
   useEffect(() => {
     const moveCursor = (e: React.MouseEvent<Element, MouseEvent>) => {
-      cursorX.set(e.clientX + 10);
-      cursorY.set(e.clientY + 10);
+      cursorX.set(e.clientX + 1);
+      cursorY.set(e.clientY + 1);
     };
 
     window.addEventListener("mousemove", (e) =>
@@ -30,8 +30,8 @@ export const useVariants = () => {
 };
 
 export const matchClassName: { [key: string]: string } = {
-  default: "w-40 h-40 bg-focus",
-  hi: "w-40 h-40 bg-white",
-  about: "w-40 h-40 bg-violet",
-  code: "w-40 h-40 bg-white",
+  default: "bg-focus",
+  hi: "bg-white",
+  about: "bg-violet",
+  code: "bg-white",
 };
