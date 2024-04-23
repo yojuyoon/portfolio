@@ -30,7 +30,7 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
   ];
 
   return (
-    <nav className="font-light fixed top-0 left-0 right-0 md:backdrop-blur-xl bg-darkBg z-50">
+    <nav className="font-light fixed top-0 left-0 right-0 md:backdrop-blur-xl lg:bg-transparent bg-darkBg z-50">
       <div className="flex justify-between align-center mx-auto p-20 xl:px-0 xl:py-20 xl:max-w-desktop">
         <div className="cursor-pointer" onClick={() => navigate("/")}>
           HY
