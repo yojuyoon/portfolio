@@ -37,10 +37,11 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
         </div>
         <MobileNav menuList={menuList} />
 
-        <ul className={clsx("justify-between gap-30 hidden", "lg:flex")}>
+        <ul className={clsx("justify-between gap-30 hidden", "md:flex")}>
           {menuList.map((menu) => {
             return (
               <Button
+                key={menu.name}
                 onClick={menu.action}
                 className="hover:text-focus ease-out duration-300"
               >
@@ -48,20 +49,6 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
               </Button>
             );
           })}
-          <Button
-            onClick={() => window.open(resume)}
-            className="hover:text-focus ease-out duration-300"
-          >
-            Resume
-          </Button>
-          <Button
-            onClick={() => {
-              navigate("/about");
-            }}
-            className="hover:text-focus ease-out duration-300"
-          >
-            About
-          </Button>
           {/* <Button
             onClick={() => {}}
             className="hover:text-focus ease-out duration-300"
