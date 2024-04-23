@@ -93,7 +93,7 @@ export const projectList: { [key: string]: string }[] = [
       "The project is a platform for organizing meetups and bringing diverse people together with common interests.",
     techStack: "TRPC, React, Next.js, Recoil, Tailwind",
     link: "https://github.com/kim-taewoo/knock-knock",
-    img: "/src/assets/images/knockknock.png",
+    img: "knockKnock",
   },
   {
     name: "WeChicken",
@@ -101,7 +101,7 @@ export const projectList: { [key: string]: string }[] = [
       "This service is designed to help students in the bootcamp build a blog community, archive their blogs, and promote learning through blog post challenges.",
     techStack: "React, Next.js, React Query, RTK, Emotion.js",
     link: "https://github.com/wechicken/wechicken-frontend-2",
-    img: "/src/assets/images/wechicken.jpeg",
+    img: "wechicken",
   },
   {
     name: "rabbit-turtle",
@@ -110,7 +110,7 @@ export const projectList: { [key: string]: string }[] = [
     techStack:
       "React, TypeScript, Apollo GraphQL, Tailwind, Styled-Component, ES6+",
     link: "https://github.com/rabbit-turtle/frontend-next",
-    img: "/src/assets/images/rabbitturtle.png",
+    img: "rabbitturtle",
   },
   {
     name: "DataWeSA",
@@ -119,6 +119,6 @@ export const projectList: { [key: string]: string }[] = [
     techStack: "React, Redux, Highcharts, Styled-Component, ES6+",
     video: "https://youtu.be/EdORsq1cI6s?si=Ui7bxGadJ6Ab_O3z",
     link: "https://github.com/yojuyoon/10-dataWeSA-frontend",
-    img: "/src/assets/images/datawesa.png",
+    img: "datawesa",
   },
 ];

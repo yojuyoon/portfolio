@@ -3,6 +3,17 @@ import { RefObject } from "react";
 import Github from "src/assets/svgs/github.svg?react";
 import Button from "src/components/common/Button";
 import { projectList } from "src/constant";
+import knockKnock from "/src/assets/images/knockknock.png";
+import rabbitturtle from "/src/assets/images/rabbitturtle.png";
+import wechicken from "/src/assets/images/wechicken.jpeg";
+import datawesa from "/src/assets/images/datawesa.png";
+
+const matchImg: { [key: string]: string } = {
+  knockKnock,
+  wechicken,
+  rabbitturtle,
+  datawesa,
+};
 
 const Card = ({
   info,
@@ -17,7 +28,7 @@ const Card = ({
     <div>
       <div className="max-h-300 overflow-hidden rounded-[4px]">
         <img
-          src={info.img}
+          src={matchImg[info.img]}
           className="min-w-200 min-h-200 xl:min-w-400 xl:min-h-300 object-cover"
         />
       </div>
