@@ -53,7 +53,7 @@ function Layout({
         ref={mouseRef}
       >
         <Nav scrollingTop={scrollingTop} />
-        <main className="xl:max-w-desktop mx-auto py-30 font-light pt-160">
+        <main className="xl:max-w-desktop mx-auto py-30 font-light pt-120 md:pt-160">
           {children}
         </main>
         <Footer />

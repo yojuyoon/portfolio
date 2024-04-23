@@ -50,7 +50,12 @@ function Introduction({
         animate="visible"
         transition={{ duration: 0.6 }}
       >
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#9845E8] from-5% via-[#33D2FF] to-[#DD5789] to-60% text-[96px] font-semibold">
+        <div
+          className={clsx(
+            "text-transparent bg-clip-text bg-gradient-to-r from-[#9845E8] from-5% via-[#33D2FF] to-[#DD5789] to-60% font-semibold text-[72px]",
+            "md:text-[84px] lg:text-[96px]"
+          )}
+        >
           Hannah Yoon
         </div>
         <p>

@@ -100,7 +100,7 @@ function About() {
             </Button>
             .
           </div>
-          <div className="min-w-344">
+          <div className="min-w-344 hidden md:block">
             <img className="w-330" src={profile} alt="profile" />
           </div>
         </div>

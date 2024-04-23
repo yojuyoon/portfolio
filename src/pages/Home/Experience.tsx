@@ -10,7 +10,7 @@ function Experience() {
   return (
     <div className="mt-40 pb-60 border-b dark:border-[#3c3b3bbf]">
       EXPERIENCE
-      <div className="flex align-center gap-30 mt-40">
+      <div className="flex align-center gap-10 md:gap-30 mt-40">
         {companies.map((company: { [key: string]: string | string[] }, idx) => (
           <Fragment key={company.name as string}>
             <Button
@@ -21,7 +21,7 @@ function Experience() {
               <>
                 <div
                   className={clsx(
-                    "z-10 w-70",
+                    "z-10 w-63 md:w-70",
                     idx === index ? "opacity-100" : "opacity-70 "
                   )}
                 >
@@ -30,7 +30,7 @@ function Experience() {
                 {idx === index ? (
                   <motion.div
                     layout
-                    className="absolute top-[-1.5px] left-0 dark:bg-lightBlack bg-extraLightGray w-110 h-40 rounded-[4px] z-[-1] mix-blend-screen"
+                    className="absolute top-[-1.5px] left-0 dark:bg-lightBlack bg-extraLightGray w-103 md:w-110 h-40 rounded-[4px] z-[-1] mix-blend-screen"
                     layoutId="underline"
                   />
                 ) : null}
@@ -48,9 +48,11 @@ function Experience() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="flex justify-between mb-10">
+            <div className="flex justify-between mb-10 flex-col sm:flex-row">
               <span>{companies[index].position}</span>
-              <span className="font-thin">{companies[index].period}</span>
+              <span className="font-thin opacity-80 pt-10 sm:opacity-100 sm:pt-0">
+                {companies[index].period}
+              </span>
             </div>
             <span className="text-caption">
               {companies[index].name} / {companies[index].location}
