@@ -1,12 +1,20 @@
 import Layout from "src/components/common/Layout";
 import profile from "/src/assets/images/profile_img.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "src/components/common/Button";
 import { resume } from "src/constant";
 
 function About() {
   const [cursorText, setCursorText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("about");
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const hiEnter = () => {
     setCursorText("👋");
@@ -55,14 +63,14 @@ function About() {
             <br />
             <br />
             Feel free to reach out via{" "}
-            <Button
+            <a
+              href="mailto:hannahyoon1121@gmail.com"
               onMouseEnter={hiEnter}
               onMouseLeave={hiLeave}
-              onClick={() => window.open("mailto:hannahyoon1121@gmail.com")}
               className="text-white underline"
             >
               e-mail
-            </Button>
+            </a>
             , or follow me on{" "}
             <Button
               onMouseEnter={hiEnter}

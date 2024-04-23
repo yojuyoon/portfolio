@@ -32,7 +32,7 @@ function Layout({
     <Fragment>
       <motion.div
         className={clsx(
-          "rounded-full mix-blend-difference fixed top-0 left-0 z-0",
+          "rounded-full mix-blend-difference fixed top-0 left-0 z-0 hidden lg:block",
           matchClassName[cursorVariant!]
         )}
         style={{
@@ -46,7 +46,10 @@ function Layout({
       </motion.div>
 
       <div
-        className="font-poppins dark:bg-darkBg dark:text-white text-darkbg"
+        className={clsx(
+          "font-poppins dark:bg-darkBg dark:text-white text-darkbg px-20",
+          "xl:px-0"
+        )}
         ref={mouseRef}
       >
         <Nav scrollingTop={scrollingTop} />

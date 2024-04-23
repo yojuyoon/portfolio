@@ -25,7 +25,7 @@ function Contact({
   return (
     <div
       className={clsx(
-        "flex justify-between items-center gap-15 absolute top-25 transition-all duration-300",
+        "lg:flex justify-between items-center gap-15 absolute top-25 transition-all duration-300 hidden",
         isOpenInfos ? "opacity-100" : "opacity-0"
       )}
     >

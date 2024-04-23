@@ -4,6 +4,7 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { resume } from "src/constant";
+import clsx from "clsx";
 
 function Nav({ scrollingTop }: { scrollingTop: () => void }) {
   const navigate = useNavigate();
@@ -11,23 +12,23 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
 
   return (
     <nav className="font-light fixed top-0 left-0 right-0 backdrop-blur-xl">
-      <div className="flex justify-between align-center mx-auto py-20 xl:max-w-desktop">
+      <div className="flex justify-between align-center mx-auto p-20 xl:px-0 xl:py-20 xl:max-w-desktop">
         <div className="cursor-pointer" onClick={() => navigate("/")}>
           HY
         </div>
-        <ul className="flex justify-between gap-30">
+        <ul className={clsx("justify-between gap-30 hidden", "lg:flex")}>
           <Button
             onClick={() => {
               if (includes(location.pathname, "about")) navigate("/");
               scrollingTop();
             }}
-            className="hover:text-focusText ease-out duration-300"
+            className="hover:text-focus ease-out duration-300"
           >
             Projects
           </Button>
           <Button
             onClick={() => window.open(resume)}
-            className="hover:text-focusText ease-out duration-300"
+            className="hover:text-focus ease-out duration-300"
           >
             Resume
           </Button>
@@ -35,13 +36,13 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
             onClick={() => {
               navigate("/about");
             }}
-            className="hover:text-focusText ease-out duration-300"
+            className="hover:text-focus ease-out duration-300"
           >
             About
           </Button>
           {/* <Button
             onClick={() => {}}
-            className="hover:text-focusText ease-out duration-300"
+            className="hover:text-focus ease-out duration-300"
           >
             <Theme />
           </Button> */}

@@ -30,7 +30,8 @@ export const useVariants = () => {
 };
 
 export const matchClassName: { [key: string]: string } = {
-  default: "w-40 h-40 bg-[#13ACDE]",
-  hi: "w-40 h-40 bg-[#FFFFFF]",
-  about: "w-40 h-40 bg-[#9358F7]",
+  default: "w-40 h-40 bg-focus",
+  hi: "w-40 h-40 bg-white",
+  about: "w-40 h-40 bg-violet",
+  code: "w-40 h-40 bg-white",
 };

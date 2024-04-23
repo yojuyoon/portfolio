@@ -85,3 +85,40 @@ export const matchToGradient: { [key: string]: string } = {
 
 export const resume =
   "https://docs.google.com/document/d/10TqpTGE6u5SXv7Z1Go5JHD2_uPqQ-dLx/edit?usp=sharing&ouid=112610464733004498804&rtpof=true&sd=true";
+
+export const projectList: { [key: string]: string }[] = [
+  {
+    name: "KnockKnock",
+    description:
+      "The project is a platform for organizing meetups and bringing diverse people together with common interests.",
+    techStack: "TRPC, React, Next.js, Recoil, Tailwind",
+    link: "https://github.com/kim-taewoo/knock-knock",
+    img: "/src/assets/images/knockknock.png",
+  },
+  {
+    name: "WeChicken",
+    description:
+      "This service is designed to help students in the bootcamp build a blog community, archive their blogs, and promote learning through blog post challenges.",
+    techStack: "React, Next.js, React Query, RTK, Emotion.js",
+    link: "https://github.com/wechicken/wechicken-frontend-2",
+    img: "/src/assets/images/wechicken.jpeg",
+  },
+  {
+    name: "rabbit-turtle",
+    description:
+      "This project is a second-hand marketplace-based live chat and location tracking service that eliminates the anxiety of no-shows by letting you know where the other party is in real-time.",
+    techStack:
+      "React, TypeScript, Apollo GraphQL, Tailwind, Styled-Component, ES6+",
+    link: "https://github.com/rabbit-turtle/frontend-next",
+    img: "/src/assets/images/rabbitturtle.png",
+  },
+  {
+    name: "DataWeSA",
+    description:
+      "This project is a clone project that visualizes charts, maps, and collects and analyzes various data from the U.S., including coronavirus data.",
+    techStack: "React, Redux, Highcharts, Styled-Component, ES6+",
+    video: "https://youtu.be/EdORsq1cI6s?si=Ui7bxGadJ6Ab_O3z",
+    link: "https://github.com/yojuyoon/10-dataWeSA-frontend",
+    img: "/src/assets/images/datawesa.png",
+  },
+];
