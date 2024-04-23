@@ -7,12 +7,14 @@ import knockKnock from "/src/assets/images/knockknock.png";
 import rabbitturtle from "/src/assets/images/rabbitturtle.png";
 import wechicken from "/src/assets/images/wechicken.jpeg";
 import datawesa from "/src/assets/images/datawesa.png";
+import hannahyoon from "/src/assets/images/hannahyoon.png";
 
 const matchImg: { [key: string]: string } = {
   knockKnock,
   wechicken,
   rabbitturtle,
   datawesa,
+  hannahyoon,
 };
 
 const Card = ({
@@ -26,21 +28,23 @@ const Card = ({
 }) => {
   return (
     <div>
-      <div className="max-h-300 overflow-hidden rounded-[4px]">
+      <div className="h-340 lg:max-h-300 overflow-hidden rounded-[4px]">
         <img
           src={matchImg[info.img]}
-          className="min-w-200 min-h-200 xl:min-w-400 xl:min-h-300 object-cover"
+          className="min-w-200 w-full h-300 xl:min-w-400 xl:min-h-300 object-cover bg-center"
         />
       </div>
       <div className="flex justify-between pt-20 pb-10">
         <h5 className="font-medium dark:font-normal">{info.name}</h5>
-        <Button
-          onClick={() => window.open(info.link)}
-          onMouseEnter={codeEnter}
-          onMouseLeave={defaultCursor}
-        >
-          <Github />
-        </Button>
+        {info.name !== "Portfolio" && (
+          <Button
+            onClick={() => window.open(info.link)}
+            onMouseEnter={codeEnter}
+            onMouseLeave={defaultCursor}
+          >
+            <Github />
+          </Button>
+        )}
       </div>
       <div className="dark:text-lightGray dark:font-thin min-h-75">
         {info.description}

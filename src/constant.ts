@@ -88,10 +88,18 @@ export const resume =
 
 export const projectList: { [key: string]: string }[] = [
   {
+    name: "Portfolio",
+    description:
+      "The project is for a portfolio website, and I'll be adding blog functionality in the future.",
+    techStack: "Vite, React, TypeScript, Tailwind",
+    link: "https://github.com/kim-taewoo/knock-knock",
+    img: "hannahyoon",
+  },
+  {
     name: "KnockKnock",
     description:
       "The project is a platform for organizing meetups and bringing diverse people together with common interests.",
-    techStack: "TRPC, React, Next.js, Recoil, Tailwind",
+    techStack: "TRPC, React, TypeScript, Next.js, Recoil, Tailwind",
     link: "https://github.com/kim-taewoo/knock-knock",
     img: "knockKnock",
   },
@@ -99,7 +107,7 @@ export const projectList: { [key: string]: string }[] = [
     name: "WeChicken",
     description:
       "This service is designed to help students in the bootcamp build a blog community, archive their blogs, and promote learning through blog post challenges.",
-    techStack: "React, Next.js, React Query, RTK, Emotion.js",
+    techStack: "React, TypeScript, Next.js, React Query, RTK, Emotion.js",
     link: "https://github.com/wechicken/wechicken-frontend-2",
     img: "wechicken",
   },
@@ -112,13 +120,13 @@ export const projectList: { [key: string]: string }[] = [
     link: "https://github.com/rabbit-turtle/frontend-next",
     img: "rabbitturtle",
   },
-  {
-    name: "DataWeSA",
-    description:
-      "This project is a clone project that visualizes charts, maps, and collects and analyzes various data from the U.S., including coronavirus data.",
-    techStack: "React, Redux, Highcharts, Styled-Component, ES6+",
-    video: "https://youtu.be/EdORsq1cI6s?si=Ui7bxGadJ6Ab_O3z",
-    link: "https://github.com/yojuyoon/10-dataWeSA-frontend",
-    img: "datawesa",
-  },
+  // {
+  //   name: "DataWeSA",
+  //   description:
+  //     "This project is a clone project that visualizes charts, maps, and collects and analyzes various data from the U.S., including coronavirus data.",
+  //   techStack: "React, Redux, Highcharts, Styled-Component, ES6+",
+  //   video: "https://youtu.be/EdORsq1cI6s?si=Ui7bxGadJ6Ab_O3z",
+  //   link: "https://github.com/yojuyoon/10-dataWeSA-frontend",
+  //   img: "datawesa",
+  // },
 ];
