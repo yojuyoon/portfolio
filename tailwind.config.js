@@ -23,10 +23,14 @@ export default {
     extend: {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        openSans: ["Open Sans", "sans-serif"],
       },
       spacing: spacing(),
       width: {
         maxWidth: "1080px",
+      },
+      height: {
+        "100svh": `calc(100svh - 358px)`,
       },
       maxWidth: { desktop: "1080px" },
       colors: {

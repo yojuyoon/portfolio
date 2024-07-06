@@ -1,5 +1,20 @@
 export const companies: { [key: string]: string | string[] }[] = [
   {
+    name: "Evaheld",
+    position: "Frontend Developer",
+    location: "Sydney, AU",
+    period: "May 2024 - Present",
+    description:
+      "Serving as the Dev Team Lead during my internship, I have been responsible for overall feature implementation and documentation, while applying necessary resources to support the development team.",
+    content: [
+      "Built a career website using React.js, focusing on writing and maintaining clean code from start to finish",
+      "Managed the entire project lifecycle, from initial setup to development and deployment",
+      "Developed the architecture for web products and automated CI/CD processes, leading to a 30% increase in development efficiency",
+      "Optimized server infrastructure configurations, resulting in a 25% improvement in overall development performance.",
+      "Enhanced UI/UX by organizing and simplifying simulator data output and editing components in the social casino admin interface",
+    ],
+  },
+  {
     name: "NHN",
     position: "Frontend Developer",
     location: "Seoul, KR",
@@ -130,3 +145,6 @@ export const projectList: { [key: string]: string }[] = [
   //   img: "datawesa",
   // },
 ];
+
+export const mediumArticle =
+  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@hannahyoon1121";

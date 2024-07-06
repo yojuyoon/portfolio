@@ -27,9 +27,7 @@ function Footer() {
           return (
             <Button
               key={info.id}
-              onClick={() => {
-                window.open(info.link);
-              }}
+              onClick={() => window.open(info.link)}
               className="p-2 transition-all opacity-80 hover:opacity-100"
             >
               <span className="mr-5">{matchIcon[info.id]}</span>

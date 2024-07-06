@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.article pre {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #292929;
+  margin: 20px 0;
+  overflow: scroll;
+}
+
+.article figure {
+  margin: 20px 0;
+}
+
+.article figcaption {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: #c5c5c5;
+}
+
+.article hr {
+  margin: 20px 0;
+}
+
+.article h4,
+.article strong {
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 20px;
+  color: #e5e3e3;
+}
+
+.article h3 {
+  padding-top: 10px;
+}
+
+.article p {
+  padding-top: 10px;
+}

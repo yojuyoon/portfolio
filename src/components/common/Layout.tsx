@@ -1,8 +1,8 @@
 import { Fragment, ReactNode, RefObject } from "react";
-import Nav from "./Nav";
-import { matchClassName, useVariants } from "src/hooks/mouseConfig";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { matchClassName, useVariants } from "src/hooks/mouseConfig";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 function Layout({
@@ -32,7 +32,7 @@ function Layout({
     <Fragment>
       <motion.div
         className={clsx(
-          "w-40 h-40 rounded-full dark:mix-blend-difference fixed top-0 left-0 z-10 hidden lg:block",
+          "w-40 h-40 rounded-full fixed top-0 left-0 z-10 hidden lg:block dark:mix-blend-difference",
           matchClassName[cursorVariant!]
         )}
         style={{
@@ -47,13 +47,13 @@ function Layout({
 
       <div
         className={clsx(
-          "font-poppins dark:bg-darkBg bg-lightBg dark:text-white text-darkbg px-20",
+          "font-poppins bg-lightBg text-darkbg px-20 dark:bg-darkBg dark:text-white",
           "xl:px-0"
         )}
         ref={mouseRef}
       >
         <Nav scrollingTop={scrollingTop} />
-        <main className="xl:max-w-desktop mx-auto py-30 font-light pt-120 md:pt-160">
+        <main className="mx-auto py-30 font-light pt-120 md:pt-160 xl:max-w-desktop">
           {children}
         </main>
         <Footer />

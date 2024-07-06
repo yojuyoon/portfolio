@@ -10,13 +10,13 @@ function Experience() {
   return (
     <div className="mt-40 pb-60 border-b dark:border-[#3c3b3bbf]">
       EXPERIENCE
-      <div className="flex align-center gap-10 md:gap-30 mt-40">
+      <div className="flex align-center gap-2 md:gap-30 mt-40">
         {companies.map((company: { [key: string]: string | string[] }, idx) => (
           <Fragment key={company.name as string}>
             <Button
               key={company.name as string}
               onClick={() => setIndex(idx)}
-              className={clsx("py-6 px-20 rounded-[4px] relative")}
+              className={clsx("py-6 px-10 md:px-20 rounded-[4px] relative")}
             >
               <>
                 <div
@@ -30,7 +30,7 @@ function Experience() {
                 {idx === index ? (
                   <motion.div
                     layout
-                    className="absolute top-[-1.5px] left-0 dark:bg-lightBlack bg-extraLightGray w-103 md:w-110 h-40 rounded-[4px] z-[-1] mix-blend-screen"
+                    className="absolute top-[-1.5px] left-0 dark:bg-lightBlack bg-extraLightGray w-83 md:w-110 h-40 rounded-[4px] z-[-1] mix-blend-screen"
                     layoutId="underline"
                   />
                 ) : null}

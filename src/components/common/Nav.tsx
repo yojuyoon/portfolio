@@ -1,11 +1,10 @@
 // import Theme from "src/assets/svgs/theme.svg?react";
 import { includes } from "lodash";
-import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { resume } from "src/constant";
 import clsx from "clsx";
-
+import { resume } from "src/constant";
+import Button from "./Button";
 import MobileNav from "./MobileNav";
 
 export type Menu = {
@@ -25,6 +24,7 @@ function Nav({ scrollingTop }: { scrollingTop: () => void }) {
         scrollingTop();
       },
     },
+    { name: "Blog", action: () => navigate("/blog") },
     { name: "Resume", action: () => window.open(resume) },
     { name: "About", action: () => navigate("/about") },
   ];

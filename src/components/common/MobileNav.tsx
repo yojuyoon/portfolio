@@ -1,9 +1,9 @@
 import { SVGMotionProps, motion, useCycle } from "framer-motion";
 import { RefAttributes, useEffect, useRef } from "react";
+import clsx from "clsx";
 import { useDimensions } from "src/hooks/useDemention";
 import { Menu } from "./Nav";
 import Button from "./Button";
-import clsx from "clsx";
 
 function MobileNav({ menuList }: { menuList: Menu[] }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -64,7 +64,7 @@ function MobileNav({ menuList }: { menuList: Menu[] }) {
       >
         <Button
           className={clsx(
-            "text-[28px] pb-20 hover:text-focus transition-all cursor-pointer",
+            "text-[24px] pb-20 transition-all cursor-pointer hover:text-focus",
             isOpen ? "block" : "hidden"
           )}
           onClick={() => {
