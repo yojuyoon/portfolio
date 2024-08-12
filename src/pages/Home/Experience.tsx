@@ -8,7 +8,7 @@ function Experience() {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="mt-40 pb-60 border-b dark:border-[#3c3b3bbf]">
+    <div className="mt-40 pb-60 border-b dark:border-darkBorderGray">
       EXPERIENCE
       <div className="flex align-center gap-2 md:gap-30 mt-40">
         {companies.map((company: { [key: string]: string | string[] }, idx) => (
@@ -59,7 +59,7 @@ function Experience() {
             <span className="text-caption">
               {companies[index].name} / {companies[index].location}
             </span>
-            <p className="mt-10 dark:font-thin">
+            <p className="mt-10 dark:font-extralight">
               {companies[index].description}
             </p>
           </motion.div>

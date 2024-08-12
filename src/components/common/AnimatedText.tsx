@@ -49,17 +49,8 @@ const AnimatedCharacters = (props: { type: string; text: string }) => {
           <Wrapper key={index} className={tagStyleMap[props.type]}>
             {words[index].flat().map((element, index) => {
               return (
-                <span
-                  style={{
-                    overflow: "hidden",
-                    display: "inline-block",
-                  }}
-                  key={index}
-                >
-                  <motion.span
-                    style={{ display: "inline-block" }}
-                    variants={item}
-                  >
+                <span className="overflow-hidden inline-block" key={index}>
+                  <motion.span className="inline-block" variants={item}>
                     {element}
                   </motion.span>
                 </span>

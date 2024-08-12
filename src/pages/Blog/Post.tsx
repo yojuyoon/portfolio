@@ -8,7 +8,7 @@ function Post({ post }: { post: { [key: string]: string } }) {
   const { setState } = useContext(BlogContext);
   return (
     <div
-      className="border-b border-b-darkGray py-30 cursor-pointer hover:bg-lightBlack"
+      className="border-b border-b-darkGray py-30 cursor-pointer hover:dark:bg-lightBlack hover:bg-extraLightGray transition-all"
       onClick={() => {
         setState((prev) => ({
           ...prev,

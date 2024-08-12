@@ -34,7 +34,7 @@ export default {
       },
       maxWidth: { desktop: "1080px" },
       colors: {
-        lightBg: "#F1F1F1",
+        lightBg: "#fcfcfc",
         darkBg: "#201F1F",
         caption: "#6CACE4",
         focus: "#13ACDE",
@@ -45,6 +45,7 @@ export default {
         lightBlack: "#252525",
         violet: "#9358F7",
         white: "#FFFFFF",
+        darkBorderGray: "#3c3b3bbf",
       },
       keyframes: {
         gradient: {

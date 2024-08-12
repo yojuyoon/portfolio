@@ -6,15 +6,15 @@ import { projectList } from "src/constant";
 import knockKnock from "/src/assets/images/knockknock.png";
 import rabbitturtle from "/src/assets/images/rabbitturtle.png";
 import wechicken from "/src/assets/images/wechicken.jpeg";
-import datawesa from "/src/assets/images/datawesa.png";
 import hannahyoon from "/src/assets/images/hannahyoon.png";
+import dailyPalette from "/src/assets/images/dailyPalette.png";
 
 const matchImg: { [key: string]: string } = {
   knockKnock,
   wechicken,
   rabbitturtle,
-  datawesa,
   hannahyoon,
+  dailyPalette,
 };
 
 const Card = ({
@@ -36,17 +36,15 @@ const Card = ({
       </div>
       <div className="flex justify-between pt-20 pb-10">
         <h5 className="font-medium dark:font-normal">{info.name}</h5>
-        {info.name !== "Portfolio" && (
-          <Button
-            onClick={() => window.open(info.link)}
-            onMouseEnter={codeEnter}
-            onMouseLeave={defaultCursor}
-          >
-            <Github />
-          </Button>
-        )}
+        <Button
+          onClick={() => window.open(info.link)}
+          onMouseEnter={codeEnter}
+          onMouseLeave={defaultCursor}
+        >
+          <Github />
+        </Button>
       </div>
-      <div className="dark:text-lightGray dark:font-thin min-h-75">
+      <div className="dark:text-lightGray dark:font-light min-h-75">
         {info.description}
       </div>
       <div className="text-focus pt-20">{info.techStack}</div>

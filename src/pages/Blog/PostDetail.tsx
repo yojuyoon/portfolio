@@ -17,7 +17,7 @@ function PostDetail() {
         <h1 className="text-[24px] font-medium md:text-[36px] md:max-w-[60%]">
           {title}
         </h1>
-        <p className="text-lightGray">{createDate}</p>
+        <p className="dark:text-lightGray text-darkGray">{createDate}</p>
       </header>
       <article
         dangerouslySetInnerHTML={{ __html: currentPost }}

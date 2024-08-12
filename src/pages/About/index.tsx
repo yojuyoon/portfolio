@@ -29,7 +29,7 @@ function About() {
   return (
     <Layout cursorText={cursorText} cursorVariant={cursorVariant}>
       <section>
-        <div className="border-b dark:border-[#3c3b3bbf] pb-20">
+        <div className="border-b dark:border-darkBorderGray pb-20">
           <h1 className="text-[62px] leading-[120%] md:text-[74px] font-semibold">
             About me
           </h1>
@@ -40,10 +40,10 @@ function About() {
         <div className="flex flex-wrap gap-40 py-30 text-mediumGray">
           <div className="max-w-600">
             <span className="dark:text-darkGray text-lightBlack">Who I am</span>
-            <br /> I’m{" "}
-            <span className="text-black font-medium dark:text-white dark:font-light">
+            <br /> I’m
+            <span className="mx-5 text-black font-medium dark:text-white dark:font-light">
               Hannah Yoon
-            </span>{" "}
+            </span>
             front-end engineer based in Sydney, Australia 🇦🇺.
             <br />
             <br />
@@ -71,39 +71,39 @@ function About() {
             functionality and visual appeal in every project I undertake.
             <br />
             <br />
-            Feel free to reach out via{" "}
+            Feel free to reach out via
             <a
               href="mailto:hannahyoon1121@gmail.com"
               onMouseEnter={hiEnter}
               onMouseLeave={hiLeave}
-              className="text-black font-medium underline dark:text-white dark:font-light"
+              className="ml-5 text-black font-medium underline dark:text-white dark:font-light"
             >
               e-mail
             </a>
-            , or follow me on{" "}
+            , or follow me on
             <Button
               onMouseEnter={hiEnter}
               onMouseLeave={hiLeave}
               onClick={() => window.open("https://www.instagram.com/yojuyoon")}
-              className="text-black font-medium underline dark:text-white dark:font-light"
+              className="text-black ml-5 font-medium underline dark:text-white dark:font-light"
             >
               Instagram
             </Button>
             . Want to see where I’ve worked? Check out my{" "}
             <Button
               onClick={() => window.open(resume)}
-              className="text-black font-medium underline dark:text-white dark:font-light"
+              className="text-black ml-5 font-medium underline dark:text-white dark:font-light"
             >
               Resume
             </Button>
-            , or Connect with me on{" "}
+            , or Connect with me on
             <Button
               onMouseEnter={hiEnter}
               onMouseLeave={hiLeave}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/hannah-jiyoung-yoon")
               }
-              className="text-black font-medium underline dark:font-light dark:text-white "
+              className="text-black font-medium underline dark:font-light dark:text-white"
             >
               LinkedIn
             </Button>

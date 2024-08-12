@@ -103,11 +103,20 @@ export const resume =
 
 export const projectList: { [key: string]: string }[] = [
   {
+    name: "DailyPalette",
+    description:
+      "This project is a personal full-stack project for a daily journal website, and I'm still working on it.",
+    techStack:
+      "Vite, React, TypeScript, Tailwind, Nest.js, PostgreSQL, TypeORM, Docker",
+    link: "https://github.com/yojuyoon/dailyPalette_client",
+    img: "dailyPalette",
+  },
+  {
     name: "Portfolio",
     description:
       "The project is for a portfolio website, and I'll be adding blog functionality in the future.",
     techStack: "Vite, React, TypeScript, Tailwind",
-    link: "https://github.com/kim-taewoo/knock-knock",
+    link: "https://github.com/yojuyoon/portfolio",
     img: "hannahyoon",
   },
   {
@@ -135,16 +144,47 @@ export const projectList: { [key: string]: string }[] = [
     link: "https://github.com/rabbit-turtle/frontend-next",
     img: "rabbitturtle",
   },
-  // {
-  //   name: "DataWeSA",
-  //   description:
-  //     "This project is a clone project that visualizes charts, maps, and collects and analyzes various data from the U.S., including coronavirus data.",
-  //   techStack: "React, Redux, Highcharts, Styled-Component, ES6+",
-  //   video: "https://youtu.be/EdORsq1cI6s?si=Ui7bxGadJ6Ab_O3z",
-  //   link: "https://github.com/yojuyoon/10-dataWeSA-frontend",
-  //   img: "datawesa",
-  // },
 ];
 
 export const mediumArticle =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@hannahyoon1121";
+
+export const variants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+};
+
+export const itemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+  },
+};
+
+export const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(30px at 90vw 40px)",
+    transition: {
+      delay: 0.3,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
